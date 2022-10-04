@@ -12,12 +12,16 @@ app.use(express.urlencoded({ extended: false }))
 // Modules
 const StoreRouter = require('./routes/store.route')
 const UserRouter = require('./routes/user.route')
+const InfoRouter = require('./routes/info.route')
+const TaskRouter = require('./routes/task.route')
 const ProductRouter = require('./routes/product.route')
 
 // Routing
 app.use(StoreRouter)
 app.use(UserRouter)
 app.use(ProductRouter)
+app.use(InfoRouter)
+app.use(TaskRouter)
 
 
 // Authenticate if DB is connected

@@ -1,13 +1,13 @@
 const Sequelize = require('sequelize')
 const config = require('../config/config')
 
-const Product = config.define('Product', {
-    name: {
+const Task = config.define('Task', {
+    task: {
         type: Sequelize.STRING,
         allowNull: true
     },
-    price: {
-        type: Sequelize.STRING,
+    schedule_datetime: {
+        type: Sequelize.DATE,
         allowNull: true
     },
     is_active: {
@@ -17,4 +17,4 @@ const Product = config.define('Product', {
     }
 })
 
-module.exports = Product
+module.exports = Task

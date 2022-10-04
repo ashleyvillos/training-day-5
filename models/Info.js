@@ -1,12 +1,20 @@
 const Sequelize = require('sequelize')
 const config = require('../config/config')
 
-const Store = config.define('Store', {
-    name: {
+const Info = config.define('Info', {
+    address: {
         type: Sequelize.STRING,
         allowNull: true
     },
-    address: {
+    hobbies: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+    birthdate: {
+        type: Sequelize.DATE,
+        allowNull: true
+    },
+    birthplace: {
         type: Sequelize.STRING,
         allowNull: true
     },
@@ -17,5 +25,4 @@ const Store = config.define('Store', {
     }
 })
 
-
-module.exports = Store
+module.exports = Info

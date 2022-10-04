@@ -2,11 +2,15 @@ const Sequelize = require('sequelize')
 const config = require('../config/config')
 
 const User = config.define('User', {
-    username: {
+    first_name: {
         type: Sequelize.STRING,
         allowNull: true
     },
-    password: {
+    middle_name: {
+        type: Sequelize.STRING,
+        allowNull: true
+    },
+    last_name: {
         type: Sequelize.STRING,
         allowNull: true
     },

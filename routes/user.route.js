@@ -22,6 +22,10 @@ UserRouter.get('/user/info/:id', async (req, res) => {
     return res.status(200).send({response})
 })
 
+UserRouter.post('/user', async (req, res) => {
+    let response = await UserController.createUser(req.body)
+    return res.status(200).send({response})
+})
 
 UserRouter.put('/user', async (req, res) => {
     let response = await UserController.updateUser(req.body)

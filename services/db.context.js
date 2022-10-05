@@ -1,8 +1,7 @@
-const Store = require('../models/Store')
 const User = require('../models/User')
 const Task = require('../models/Task')
 const Info = require('../models/Info')
-const Product = require('../models/Product')
+
 
 // ******************* USER ******************* //
 User.hasOne(Info, {
@@ -27,16 +26,4 @@ Task.belongsTo(User, {
     as: 'user'
 })
 
-// ******************* STORE ******************* //
-Store.hasMany(Product, {
-    foreignKey: 'store_id',
-    as: 'product_items'
-})
-
-// ******************* PRODUCT ******************* //
-Product.belongsTo(Store, {
-    foreignKey: 'store_id',
-    as: 'store_info'
-})
-
-module.exports = { Store, User, Product, Task, Info }
+module.exports = { User, Task, Info }
